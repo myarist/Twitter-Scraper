@@ -41,7 +41,60 @@ username | The name of the person who created the Tweet
 text | Full text of Tweets
 date | The date the Tweet was sent
 retweets | Number of people who retweeted
-favorites | The number of people who make it a Favorite
-mentions | Number of people doing Mention
+favorites | Number of people who make it as favorite
+mentions | List of mentions added
 hastags | List of hashtags that are in Tweets
 
+The following is an overview of the data obtained
+
+![getold](https://github.com/MyArist/Twitter-Scraper-for-Covid-19/blob/master/README/get.png)
+
+## Tweepy
+
+In this module, I use Twitter API.
+On this module, I use some filter, such as:
+
+```
+tweets = tw.Cursor(api.search, 
+                   q                = new_search,
+                   result_type      = "mixed",
+                   lang             = "id",
+                   count            = 100,
+                   include_entities = True,
+                   since_id         = "2020-01-01").items(2000)
+```
+
+Filters | Function
+:---: | :---
+q | Look for Tweets that contain the word
+result_type | Consisting of Recent, Popular, and Mixed
+lang | The language used
+count | Number of Tweets per page
+include_entities | Retrieves other optional attributes
+since_id | Look for Tweets starting from the given date
+
+Then, from this module, several variables are taken including:
+
+```
+users_locs = [[tweet.created_at,
+               tweet.author.screen_name,
+               tweet.author.name,
+               tweet.text,
+               tweet.retweet_count,
+               tweet.favorite_count,
+               tweet.user.location] for tweet in tweets]
+```
+
+Variables | Contents
+:---: | :---
+created_at | The date the Tweet was sent
+author.screen_name | Unique name for the user
+author.name | The name that appears
+text | Full text of Tweets
+retweet_count | Number of people who retweeted
+favorite_count | Number of people who make it as favorite
+user.location | Location when sending a Tweet
+
+The following is an overview of the data obtained
+
+![twee](https://github.com/MyArist/Twitter-Scraper-for-Covid-19/blob/master/README/twee.png)
