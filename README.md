@@ -49,6 +49,8 @@ The following is an overview of the data obtained
 
 ![getold](https://github.com/MyArist/Twitter-Scraper-for-Covid-19/blob/master/README/get.png)
 
+For more documentation, visit [GetOldTweets3](https://pypi.org/project/GetOldTweets3/)
+
 ## Tweepy
 
 In this module, I use Twitter API.
@@ -98,3 +100,5 @@ user.location | Location when sending a Tweet
 The following is an overview of the data obtained
 
 ![twee](https://github.com/MyArist/Twitter-Scraper-for-Covid-19/blob/master/README/twee.png)
+
+For more documentation, visit [Tweepy](https://docs.tweepy.org/en/latest/api.html)
