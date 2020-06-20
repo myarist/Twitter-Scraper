@@ -51,6 +51,42 @@ The following is an overview of the data obtained
 
 For more documentation, visit [GetOldTweets3](https://pypi.org/project/GetOldTweets3/)
 
+## Twint
+
+The other module, that do not use API.
+On this module, I use some filter, such as:
+
+```
+c.Search = searchterm
+c.Since = since
+c.Until = until
+c.Limit = 100
+c.Lang = "id"
+```
+
+Filters | Function
+:---: | :---
+search | Look for Tweets that contain the word
+since | Look for Tweets starting from the given date
+until | Look for Tweets until the given date
+limit | Look for Tweets of a given number of limits
+lang | Lok for Tweets that use the language
+
+This module give 34 total variables including:
+- id
+- username
+- created date
+- place
+- text
+- mentions
+- urls
+- photos
+- (...)
+
+![Twint](https://github.com/MyArist/Twitter-Scraper-for-Covid-19/blob/master/README/twint.png)
+
+For more documentation, visit [Twint](https://github.com/twintproject/twint)
+
 ## Tweepy
 
 In this module, I use Twitter API.
