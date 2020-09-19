@@ -1,4 +1,4 @@
-# Twitter Scraper for Covid-19
+# Twitter Scraper
 
 Here, I use two methods for doing scrape to get the Twitter data about Covid-19.
 
